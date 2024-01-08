@@ -3,6 +3,14 @@ CXXFLAGS = -std=c++11 -Wall
 TARGET = adivina.x
 SRC = ./src/funciones.cpp ./src/main.cpp
 
+ifeq ($(OS),Windows_NT)
+    RM = del /Q
+    TARGET_EXTENSION = .exe
+else
+    RM = rm -f
+    TARGET_EXTENSION =
+endif
+
 all: build run
 
 build: $(TARGET)
@@ -14,4 +22,4 @@ run:
 	./$(TARGET)
 
 clean:
-	rm -f $(TARGET)
+	$(RM) $(TARGET)$(TARGET_EXTENSION)

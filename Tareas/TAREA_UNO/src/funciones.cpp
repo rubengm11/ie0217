@@ -5,6 +5,7 @@
 #include <random>
 #include <cmath>
 
+// Funcion para mostrar menu
 void mostrarMenu(){
     std::cout << "\n Menu\n";
     std::cout << "\n1. Modo facil\n";
@@ -13,7 +14,7 @@ void mostrarMenu(){
 
 };
 
-
+// Solicitar y ajnalizar la seleccion del usuario
 void procesarOpcion(){
     int opcion;
     std::cout << "\n Ingrese una opcion: ";
@@ -37,11 +38,13 @@ void procesarOpcion(){
             return;
 
     }
-}
+};
 
+// Funcion para el modo de juego facil.
 void modoFacil(){
     std::cout << "\nUsted ha seleccionado el Modo Facil";
 
+    // Se solicita el limite inferior y superior del intervalo
     int lim_inferior;
     std::cout << "\n Ingrese el limite inferior del intervalo: ";
     std::cin >> lim_inferior;
@@ -50,6 +53,7 @@ void modoFacil(){
     std::cout << "\n Ingrese el limite superior del intervalo: ";
     std::cin >> lim_superior;
 
+    // Se crea un array a partir de los limites ingresados por el usuario.
     int size = lim_superior - lim_inferior + 1;
     int* intervalo = new int[size];
 
@@ -57,17 +61,19 @@ void modoFacil(){
         intervalo[i] = lim_inferior + i;
     };
 
-
+    // Se define la cantidad de intentos y se genera un numero al azar de ese intervalo.
     int intentos_totales = size / 3;
     int intentos_usados = 0;
 
     std::srand(std::time(nullptr));
 
+    // Se genera un numero aleatorio utilizando la funcion rand
     int indiceAleatorio = std::rand() % size;
     int numeroAleatorio = intervalo[indiceAleatorio];
     int numero_usuario;
 
-
+    // Se solicita el numero al usuario y se analiza si es mayor, menor o igual al numero correcto.
+    // Si la cantidad de intentos es igual a la cantidad maxima, el usuario pierde y vuelve al menu.
     do {
     std::cout << "Ingresa tu intento: ";
     std::cin >> numero_usuario;
@@ -94,9 +100,11 @@ void modoFacil(){
     
 }
 
+// Funcioon para el modo dificil
 void modoDificil(){
     std::cout << "\nUsted ha seleccionado el Modo Dificl";
 
+    // Se solicita el limite inferior y superior del intervalo.
     int lim_inferior;
     std::cout << "\n Ingrese el limite inferior del intervalo: ";
     std::cin >> lim_inferior;
@@ -105,6 +113,7 @@ void modoDificil(){
     std::cout << "\n Ingrese el limite superior del intervalo: ";
     std::cin >> lim_superior;
 
+    // Se crea un array con dichos valores
     int size = lim_superior - lim_inferior + 1;
     int* intervalo = new int[size];
 
@@ -112,7 +121,7 @@ void modoDificil(){
         intervalo[i] = lim_inferior + i;
     };
 
-
+    // Se define la cantidad de intentos y se genera un numero al azar de ese intervalo.
     int intentos_totales = size / 3;
     int intentos_usados = 0;
 
@@ -123,6 +132,9 @@ void modoDificil(){
     int numeroAleatorio = intervalo[indiceAleatorio];
     int numero_usuario;
 
+
+    // Se solicita el numero al usuario y se analiza si es esta lejos, muy lejos, cerca o muy cerca del numero correcto con la funcion abs.
+    // Si la cantidad de intentos es igual a la cantidad maxima, el usuario pierde y vuelve al menu.
      do {
         std::cout << "Ingresa tu intento: ";
         std::cin >> numero_usuario;
