@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall
 TARGET = adivina.x
-SRC = funciones.cpp main.cpp
+SRC = ./src/funciones.cpp ./src/main.cpp
 
 all: build run
 
