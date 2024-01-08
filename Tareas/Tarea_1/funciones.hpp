@@ -14,9 +14,8 @@ struct Empleado{
 
 void mostrarMenu();
 void procesarOpcion();
-void escogerDificultad();
-void iniciarJuego();
-void seleccionarIntervalo();
+void modoFacil();
+void modoDificil();
 
 
 #endif
