@@ -2,8 +2,7 @@
 #include "funciones.hpp"
 
 int main() {
-    Empleado empleados[MAX_EMPLEADOS];
-    int numEmpleados = 0;
+
 
 
 
