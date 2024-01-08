@@ -1,5 +1,16 @@
 Este es el archivo README.md de la tarea 1.
 
+# Instrucciones de utilizacion del programa:
+
+- El archivo Makefile contiene los siguientes targets:
+
+1. clean: Limpia el directorio de archivos compilados y deja nicamente el codigo fuente.
+2. build: compila el codigo fuente y genera un ejecutable llamado adivina.x.
+3. run: Ejecuta el programa adivina.x
+4. all: compila y corre el juego.
+
+
+# Respuestas las partes teoricas de la tarea.
 
 1.	Ambos lenguajes comparten muchas similitudes y comparten gran parte de la sintaxis, pero C++ agrega características que permiten la programación orientada a objetos, un mejor manejo de memoria y librerías estándar adicionales.
 
@@ -61,7 +72,7 @@ c.	Main.cpp: Contiene la función main, que es el punto de entrada del programa.
 después de que el programa ha dejado de hacer uso de ella.
 
 
-Parte Automatización – Makefile 
+# Parte Automatización – Makefile 
 
 1.	
 CC: Especifica el compilador a utilizar.
