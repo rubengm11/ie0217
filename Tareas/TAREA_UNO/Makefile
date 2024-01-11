@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall
-TARGET = adivina.x
+TARGET = adivina
 SRC = ./src/funciones.cpp ./src/main.cpp
 
 ifeq ($(OS),Windows_NT)
