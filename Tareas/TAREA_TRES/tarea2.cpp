@@ -12,6 +12,7 @@ public:
     std::vector<std::vector<T>> datos;
     int filas;
     int columnas;
+    int tipo_operacion;
     // Constructor
     Matriz(int filas, int columnas) : filas(filas), columnas(columnas) {
         datos.resize(filas, std::vector<T>(columnas));
@@ -31,7 +32,10 @@ public:
 
     // Método para validar si es posible realizar la operación entre matrices
     static bool esPosibleOperacion(const Matriz<T>& matriz1, const Matriz<T>& matriz2) {
-        return (matriz1.filas == matriz2.filas) && (matriz1.columnas == matriz2.columnas);
+        if (matriz1.tipo_operacion == 3) {
+            return (matriz1.filas == matriz2.columnas);
+        } else return (matriz1.filas == matriz2.filas) && (matriz1.columnas == matriz2.columnas);
+        
     }
 
     // Método para realizar operaciones entre matrices utilizando sobrecarga de operadores
@@ -53,7 +57,7 @@ public:
     // Métodos para la multiplicación y resta de matrices
     Matriz<T> operator*(const Matriz<T>& otra) const {
         if (columnas != otra.filas) {
-            throw std::invalid_argument("La multiplicación de matrices no es posible. Número de columnas de la primera matriz no coincide con el número de filas de la segunda matriz.");
+            throw std::invalid_argument("La multiplicación de matrices no es posible.");
             std::exit(EXIT_FAILURE);
         }
 
@@ -125,7 +129,7 @@ int pedirOperacion(){
         std::cout << "Ingrese el tipo de operacion que desea: " << std::endl;
         std::cout << "1. Suma " << std::endl;
         std::cout << "2. Resta " << std::endl;
-        std::cout << "Multiplicacion " << std::endl;
+        std::cout << "3. Multiplicacion " << std::endl;
         std::cin >> operacion;
     return operacion;
 }
@@ -151,12 +155,11 @@ int main() {
     matriz2.pedirDatos();
 
     try {
-        int operacion;
-        operacion = pedirOperacion();
+        matriz1.tipo_operacion = pedirOperacion();
         Matriz<int> resultadoSuma = matriz1 + matriz2;
         Matriz<int> resultadoResta = matriz1 - matriz2;
         Matriz<int> resultadoMultiplicacion = matriz1 * matriz2;
-        switch (operacion){
+        switch (matriz1.tipo_operacion){
         case 1:
             imprimirMatriz(resultadoSuma);
             break;
