@@ -5,7 +5,7 @@ TARGET_correo = correo/correo
 TARGET_matriz = matriz/matriz
 
 SRC_correo = ./correo/funciones.cpp ./correo/main.cpp
-SRC_matriz = ./matriz/funciones.cpp ./matriz/main.cpp
+SRC_matriz = ./matriz/tarea3.cpp
 
 ifeq ($(OS),Windows_NT)
     RM = del /Q

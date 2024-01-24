@@ -6,6 +6,8 @@ Este es el archivo README.md de la tarea 3.
 
 ### Para el programa matriz
 
+- Es importante destacar que no me fue posible separar los archivos de la parte practica 1. Por lo que el makefile ejecuta el archivo funcional, de igual forma se adjuntan los tres archivos.
+
 1. clean_matriz: Limpia el directorio matriz de archivos compilados y deja unicamente el codigo fuente.
 2. build_matriz: compila el codigo fuente y genera un ejecutable llamado matriz.
 3. run_matriz: Ejecuta el programa matriz

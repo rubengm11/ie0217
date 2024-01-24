@@ -4,7 +4,6 @@
 #include <tuple>
 #include <cstdlib>
 
-// Clase Matriz
 template <typename T>
 class Matriz {
 
@@ -33,12 +32,13 @@ public:
     // Método para validar si es posible realizar la operación entre matrices
     static bool esPosibleOperacion(const Matriz<T>& matriz1, const Matriz<T>& matriz2) {
         if (matriz1.tipo_operacion == 3) {
-            return (matriz1.filas == matriz2.columnas);
+            return 1;
+
         } else return (matriz1.filas == matriz2.filas) && (matriz1.columnas == matriz2.columnas);
         
     }
 
-    // Método para realizar operaciones entre matrices utilizando sobrecarga de operadores
+    // Método para la suma
     Matriz<T> operator+(const Matriz<T>& otra) const {
         if (!esPosibleOperacion(*this, otra)) {
             throw std::invalid_argument("Las matrices no tienen las mismas dimensiones para la suma.");
@@ -54,7 +54,7 @@ public:
         return resultado;
     }
 
-    // Métodos para la multiplicación y resta de matrices
+    // Método para la multiplicación
     Matriz<T> operator*(const Matriz<T>& otra) const {
         if (columnas != otra.filas) {
             throw std::invalid_argument("La multiplicación de matrices no es posible.");
@@ -72,6 +72,7 @@ public:
         return resultado;
     }
 
+    // Método para la resta
     Matriz<T> operator-(const Matriz<T>& otra) const {
         if (!esPosibleOperacion(*this, otra)) {
             throw std::invalid_argument("Las matrices no tienen las mismas dimensiones para la resta.");
@@ -92,7 +93,6 @@ public:
 // Clase OperacionCompleja para operaciones con números complejos
 class OperacionCompleja {
 public:
-    // Método para operaciones con números complejos
     static std::complex<double> sumar(std::complex<double> num1, std::complex<double> num2) {
         return num1 + num2;
     }
@@ -112,6 +112,7 @@ void imprimirMatriz(const Matriz<T>& matriz) {
     std::cout << std::endl;
 }
 
+// Funcion para definir los tamanos de matrices
 std::tuple<int, int> pedirTamanoMatriz() {
     int filas, columnas;
     
@@ -124,6 +125,7 @@ std::tuple<int, int> pedirTamanoMatriz() {
     return std::make_tuple(filas, columnas);
 }
 
+// Funcion para pedir la operacion a realizar
 int pedirOperacion(){
     int operacion;
         std::cout << "Ingrese el tipo de operacion que desea: " << std::endl;
@@ -136,6 +138,13 @@ int pedirOperacion(){
 
 
 int main() {
+    // Se pregunta por el tipo de matriz
+    int tipo_matriz;
+    std::cout << "Ingrese el tipo de matriz que desea implementar" << std::endl;
+    std::cout << "1. Matriz de numeros reales(ints y floats)" << "\n" << "2. Matriz de numeros complejos" << std::endl;
+    std::cin >> tipo_matriz;
+
+    // Tamanos de matrices
     std::tuple<int, int> tamanoMatriz1 = pedirTamanoMatriz();
     int filasMatriz1 = std::get<0>(tamanoMatriz1);
     int columnasMatriz1 = std::get<1>(tamanoMatriz1);
@@ -148,9 +157,11 @@ int main() {
 
     std::cout << "Tamaño de la segunda matriz: " << filasMatriz2 << "x" << columnasMatriz2 << std::endl;
 
+    if (tipo_matriz == 1){
     Matriz<int> matriz1(filasMatriz1, columnasMatriz1);
     Matriz<int> matriz2(filasMatriz2, columnasMatriz2);
 
+    // Datos de la matriz real
     matriz1.pedirDatos();
     matriz2.pedirDatos();
 
@@ -159,6 +170,7 @@ int main() {
         Matriz<int> resultadoSuma = matriz1 + matriz2;
         Matriz<int> resultadoResta = matriz1 - matriz2;
         Matriz<int> resultadoMultiplicacion = matriz1 * matriz2;
+        // Se usa un case para ir a la operacion seleccionada
         switch (matriz1.tipo_operacion){
         case 1:
             imprimirMatriz(resultadoSuma);
@@ -178,9 +190,9 @@ int main() {
 
     } catch (const std::invalid_argument& e) {
         std::cerr << "Error: " << e.what() << std::endl;
-    }
+    }} else if (tipo_matriz == 2) {
 
-    // Ejemplo de uso con números complejos
+
     Matriz<std::complex<double>> matrizCompleja1(2, 2);
     Matriz<std::complex<double>> matrizCompleja2(2, 2);
 
@@ -192,7 +204,7 @@ int main() {
         imprimirMatriz(resultadoSumaCompleja);
     } catch (const std::invalid_argument& e) {
         std::cerr << "Error: " << e.what() << std::endl;
-    }
+    }} else std::cout << "Error: Digite una opcion valida" << std::endl;
 
     return 0;
 }
