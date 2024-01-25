@@ -26,4 +26,3 @@ class Triangle(Polygon):
         print("El area del triangulo es %0.2f" %area)    
 
 
-triangulo = Triangle(3)
