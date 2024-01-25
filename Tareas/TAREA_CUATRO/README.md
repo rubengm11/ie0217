@@ -25,28 +25,28 @@ Instrucciones de utilizacion
 
     - Ejemplo:
 
-    try:
-        # Código que podría generar una excepción
-    except ZeroDivisionError:
-        # Manejo del error, en este caso division entre 0, por ejemplo.
-        print("¡Error! División entre cero.")
-    else:
-        # Se ejecuta si no se generó ninguna excepción en el bloque try
-    finally:
-        # Se ejecuta siempre, independientemente de si se generó una excepción o no
+    - try:
+            # Código que podría generar una excepción
+    - except ZeroDivisionError:
+            # Manejo del error, en este caso division entre 0, por ejemplo.
+            print("¡Error! División entre cero.")
+    - else:
+            # Se ejecuta si no se generó ninguna excepción en el bloque try
+    - finally:
+            # Se ejecuta siempre, independientemente de si se generó una excepción o no
 
 6. ¿Qué son los generadores en Python y para qué se utilizan?
 
 - Los generadores son una forma eficiente de crear iteradores. Proporcionan una manera de generar secuencias de valores uno a la vez, en lugar de generar todos los valores de antemano y almacenarlos en la memoria.
 
-7. Explique la diferencia entre \__init\__ y \__call\__ en clases de Python.
+7. Explique la diferencia entre \_\_init\_\_ y \_\_call\_\_ en clases de Python.
 
-- \__init\__ es un método especial utilizado para inicializar instancias de una clase. Es llamado automáticamente cuando se crea un nuevo objeto de esa clase.
-- \__call\__ es otro método especial que permite que una instancia de la clase sea llamada como si fuera una función.
+- \_\_init\_\_ es un método especial utilizado para inicializar instancias de una clase. Es llamado automáticamente cuando se crea un nuevo objeto de esa clase.
+- \_\_call\_\_ es otro método especial que permite que una instancia de la clase sea llamada como si fuera una función.
 
-8. ¿Cómo se organizan los módulos y paquetes en Python? ¿Qué es \__init\__ .py?
+8. ¿Cómo se organizan los módulos y paquetes en Python? ¿Qué es \_\_init\_\_ .py?
 
-- Un módulo es un archivo de Python que contiene definiciones y declaraciones de código, mientras que un paquete es una colección de módulos organizados en un directorio. El archivo \__init\__.py en un paquete sirve para indicar que el directorio debe ser considerado como un paquete de Python. Puede estar vacío o contener código de inicialización para el paquete. Si está vacío, simplemente se usa para señalar que el directorio debe ser tratado como un paquete.
+- Un módulo es un archivo de Python que contiene definiciones y declaraciones de código, mientras que un paquete es una colección de módulos organizados en un directorio. El archivo \_\_init\_\_.py en un paquete sirve para indicar que el directorio debe ser considerado como un paquete de Python. Puede estar vacío o contener código de inicialización para el paquete. Si está vacío, simplemente se usa para señalar que el directorio debe ser tratado como un paquete.
 
 9. Explique la diferencia entre métodos append() e extend() en listas de Python.
 
@@ -66,9 +66,9 @@ Instrucciones de utilizacion
 - Se pueden utilizar modulos try y except, por ejemplo:
 
     - try:
-         import modulo_inexistente
-      except ImportError:
-         print("El módulo no pudo ser importado.")
+        import modulo_inexistente
+    - except ImportError:
+        print("El módulo no pudo ser importado.")
 
 13. ¿Cuál es la diferencia entre una clase y un objeto en Python?
 
