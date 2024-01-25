@@ -26,14 +26,14 @@ Instrucciones de utilizacion
     - Ejemplo:
 
     - try:
-            # Código que podría generar una excepción
+        - Código que podría generar una excepción
     - except ZeroDivisionError:
-            # Manejo del error, en este caso division entre 0, por ejemplo.
-            print("¡Error! División entre cero.")
+        - Manejo del error, en este caso division entre 0, por ejemplo.
+        - print("¡Error! División entre cero.")
     - else:
-            # Se ejecuta si no se generó ninguna excepción en el bloque try
+        - Se ejecuta si no se generó ninguna excepción en el bloque try
     - finally:
-            # Se ejecuta siempre, independientemente de si se generó una excepción o no
+        - Se ejecuta siempre, independientemente de si se generó una excepción o no
 
 6. ¿Qué son los generadores en Python y para qué se utilizan?
 
@@ -66,9 +66,9 @@ Instrucciones de utilizacion
 - Se pueden utilizar modulos try y except, por ejemplo:
 
     - try:
-        import modulo_inexistente
+        - import modulo_inexistente
     - except ImportError:
-        print("El módulo no pudo ser importado.")
+        - print("El módulo no pudo ser importado.")
 
 13. ¿Cuál es la diferencia entre una clase y un objeto en Python?
 
