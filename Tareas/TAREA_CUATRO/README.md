@@ -76,7 +76,7 @@ Instrucciones de utilizacion
 
 14. Hable sobre la diferencia entre una clase abstracta y una interfaz en Python.
 
--  L diferencia entre una clase abstracta y una interfaz se encuentra principalmente en la terminología y la implementación. Una clase abstracta utiliza el módulo abc para definir métodos abstractos, que deben ser implementados por las clases hijas. Para el caso de la interfaz, esta se puede lograr mediante clases abstractas que contienen métodos abstractos que actúan como reglas contractuales para las clases que las implementan. 
+-  La diferencia entre una clase abstracta y una interfaz se encuentra principalmente en la terminología y la implementación. Una clase abstracta utiliza el módulo abc para definir métodos abstractos, que deben ser implementados por las clases hijas. Para el caso de la interfaz, esta se puede lograr mediante clases abstractas que contienen métodos abstractos que actúan como reglas contractuales para las clases que las implementan. 
 
 15. Explique el concepto de sobreescritura de métodos en Python y cómo se realiza.
 
