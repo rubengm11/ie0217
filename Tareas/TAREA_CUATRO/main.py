@@ -1,5 +1,7 @@
 from alergia import Alergia
 from evaluacion_especifica import EvaluacionEspecifica
+from tipos_de_alergias import TiposDeAlergias
+from evaluacion_general import EvaluacionGeneral
 
 def mostrar_menu():
     while True:
@@ -7,14 +9,18 @@ def mostrar_menu():
         print("1. Ingresar puntuacion de alergia")
         print("2. Ingresar nombre de alergia")
         print("3. Nueva alergia")
-        print("4. Salir")
+        print("4. Mostrar informacion de alergias")
+        print("5. Salir")
 
         opcion = input("Seleccione una opción (1-4): ")
 
         if opcion == "1":
             try:
                 puntuacion_usuario = int(input("Ingrese su puntuacion de alergia: "))
-                print(f"Puntuacion de alergia: {puntuacion_usuario}")
+                usuario1 = EvaluacionEspecifica(puntuacion_usuario)
+                usuario1.evaluar_alergias()
+                usuario1.mostrar_info()
+
             except ValueError:
                 print("Error: Debe ingresar un número entero válido.")
         elif opcion == "2":
@@ -27,6 +33,9 @@ def mostrar_menu():
             nueva_alergia = input("Ingrese el nombre o codigo de la alergia: ")
             print(f"Nueva alergia ingresada: {nueva_alergia}")
         elif opcion == "4":
+            consulta = Alergia()
+            consulta.imprimirInfo()
+        elif opcion == "5":
             print("Saliendo del programa. ¡Hasta luego!")
             break
         else:
