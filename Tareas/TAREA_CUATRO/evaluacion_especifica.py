@@ -14,17 +14,24 @@ class EvaluacionEspecifica(Alergia):
             for alergia, codigo in self.alergias_conocidas.items():
                 if self.puntuacion & codigo:
                     self.alergias_usuario.append(alergia)
-            #return self.alergias_usuario
 
 
     def mostrar_info(self):
         print('A continuacion se detalla la info del usuario')
         print(f"Puntuacion de alergia: {self.puntuacion}")
-        #print(self.alergias_usuario)
         for alergia in self.alergias_usuario:
             print(alergia, ":", self.alergias_conocidas[alergia])
 
-        print("")
-        print("")
-        super().imprimirInfo()
+    def calcularPuntuacion(self, list):
+        alergias_encontradas = []
+        alergias_no_encontradas = []
+        for alergia in list:
+            if alergia in self.alergias_conocidas:
+                self.puntuacion += self.alergias_conocidas[alergia]
+                alergias_encontradas.append(alergia)
+            else:
+                alergias_no_encontradas.append(alergia)
+        print("\nSus alergias son:", alergias_encontradas)
+        print("Alergias no encontradas: ", alergias_no_encontradas)
+        print("Su puntuacion de alergia es:", self.puntuacion)
         

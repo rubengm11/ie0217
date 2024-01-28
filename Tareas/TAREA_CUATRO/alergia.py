@@ -10,6 +10,24 @@ class Alergia:
 
 
         def imprimirInfo(self):
-             print('A continuacion se detalla la informacion de las alergias en la base de datos')
-             for alergia in self.alergias_conocidas:
-                  print(self.alergias_conocidas[alergia], "-", alergia)
+            print('\nBienvenido a la base de datos de alergias')
+            print('1. Consultar por todas las alergias')
+            print('2. Consultar por una alergia')
+
+            opcion = input("Digite la opcion que desea consultar: ")
+
+            if (opcion == "1"):
+                print('A continuacion se detalla la informacion de las alergias en la base de datos')
+                for alergia in self.alergias_conocidas:
+                    print(self.alergias_conocidas[alergia], "-", alergia)
+            elif(opcion == "2"):
+                alergia = input("Digite la alergia que desea consultar: ")
+                try: 
+                    print("El codigo de alergia de", alergia, "es", self.alergias_conocidas[alergia])
+                except:
+                     print("Esa alergia no se encuentra en la base de datos")
+            else: 
+                 print("Esa no es una opcion posible") 
+                
+
+                 
