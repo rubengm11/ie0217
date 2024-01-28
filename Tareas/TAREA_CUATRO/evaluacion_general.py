@@ -7,7 +7,7 @@ class EvaluacionGeneral(EvaluacionEspecifica):
 
 
     def puntuacion_general(self):
-        print('imprimir la puntuacion total')
+        print('hola')
 
     
     def noEncontrado(self):

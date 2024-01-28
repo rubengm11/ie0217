@@ -6,7 +6,7 @@ class Alergia:
 
 
         def crearAlergia(self):
-            print('Creando una alergia')
+             print("Creando una alergia")
 
 
         def imprimirInfo(self):

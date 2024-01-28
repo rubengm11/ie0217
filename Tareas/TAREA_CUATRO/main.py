@@ -20,8 +20,8 @@ def mostrar_menu():
         if opcion == "1":
             try:
                 puntuacion_usuario = int(input("Ingrese su puntuacion de alergia: "))
-                usuario1 = EvaluacionEspecifica(puntuacion_usuario)
-                usuario1.evaluar_alergias()
+                usuario1 = EvaluacionEspecifica()
+                usuario1.evaluar_alergias(puntuacion_usuario)
                 usuario1.mostrar_info()
 
             except ValueError:
@@ -36,7 +36,7 @@ def mostrar_menu():
                     print("Error: Debe ingresar una cadena de caracteres sin numeros")
                 salir = input("Digite 0 para salir y ver su informacion de alergia, o cualquier otra tecla para continuar: ")
                 if salir == "0":
-                    usuario2 = EvaluacionEspecifica(0)
+                    usuario2 = EvaluacionEspecifica()
                     usuario2.calcularPuntuacion(alergia_consulta)
                     break
         elif opcion == "3":
