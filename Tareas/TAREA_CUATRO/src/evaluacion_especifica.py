@@ -36,6 +36,10 @@ class EvaluacionEspecifica(Alergia):
         print("\nSus alergias son:", alergias_encontradas)
         print("Alergias no encontradas: ", alergias_no_encontradas)
         print("Su puntuacion de alergia es:", puntuacion)
+    
+
+
+
         
         
 

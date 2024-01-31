@@ -14,7 +14,7 @@ class Alergia:
             print('1. Consultar por todas las alergias')
             print('2. Consultar por una alergia')
 
-            opcion = input("Digite la opcion que desea consultar: ")
+            opcion = input("Digite la opcion que desea consultar o 0 para salir: ")
 
             if (opcion == "1"):
                 print('A continuacion se detalla la informacion de las alergias en la base de datos')
@@ -26,6 +26,8 @@ class Alergia:
                     print("El codigo de alergia de", alergia, "es", self.alergias_conocidas[alergia])
                 except:
                      print("Esa alergia no se encuentra en la base de datos")
+            elif(opcion=="0"):
+                 exit
             else: 
                  print("Esa no es una opcion posible") 
                 
