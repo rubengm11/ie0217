@@ -12,15 +12,14 @@
 
 - Se realizaron los analisis solicitados, de los cuales fue posible concluir que el programa se comporta bien para una baja cantidad de datos a procesar, pero cuando el volumen de estos datos es alto, se comienzan a notar problemas en la velocidad de ejecucion.
 
-- Se observa que el 
 
 ## Los resultados de rendimiento de cada metodo se muestra a continuacion
 
-Tiempo de ejecución de evaluar_alergias: 3.032999995866703e-05 segundos
-Tiempo de ejecución de mostrar_info: 0.00025044500000603875 segundos
-Tiempo de ejecución de calcular_puntuacion: 9.03489999473095e-05 segundos
-Tiempo de ejecución de analizarAlergia: 0.00018852900007004791 segundos
-Tiempo de ejecución de crearAlergia: 2.814100002979103e-05 segundos
+- Tiempo de ejecución de evaluar_alergias: 3.032999995866703e-05 segundos
+- Tiempo de ejecución de mostrar_info: 0.00025044500000603875 segundos
+- Tiempo de ejecución de calcular_puntuacion: 9.03489999473095e-05 segundos
+- Tiempo de ejecución de analizarAlergia: 0.00018852900007004791 segundos
+- Tiempo de ejecución de crearAlergia: 2.814100002979103e-05 segundos
 
 - Losmetodos mas lentos fueron mostrar info y AnalizarAlergia, esto debido a la necesidad de acceso elemento por elemento de ambos metodos. Una posible mejora es el uso de tuplas para conjuntos de elementos inmutables.
 
