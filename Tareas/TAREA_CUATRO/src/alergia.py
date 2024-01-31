@@ -40,7 +40,7 @@ class Alergia:
             except KeyError:
                 print("Esa alergia no se encuentra en la base de datos")
         elif opcion == "0":
-            exit()  # Se corrigió el llamado a la función exit
+            exit()
         else:
             print("Esa no es una opcion posible")
                 

@@ -64,19 +64,19 @@ def mostrar_menu():
 
 
     # Análisis de la clase EvaluacionEspecifica
-#  evaluacion = EvaluacionEspecifica()
+#    evaluacion = EvaluacionEspecifica()
 
     # Medir el tiempo de ejecución utilizando timeit para el método evaluar_alergias
-#  tiempo_evaluar_alergias = timeit.timeit(lambda: evaluacion.evaluar_alergias(128), number=10)
-#  print(f"Tiempo de ejecución de evaluar_alergias: {tiempo_evaluar_alergias} segundos")
+#    tiempo_evaluar_alergias = timeit.timeit(lambda: evaluacion.evaluar_alergias(128), number=10)
+#    print(f"Tiempo de ejecución de evaluar_alergias: {tiempo_evaluar_alergias} segundos")
 
     # Medir el tiempo de ejecución utilizando timeit para el método mostrar_info
-#   tiempo_mostrar_info = timeit.timeit(evaluacion.mostrar_info, number=10)
-#   print(f"Tiempo de ejecución de mostrar_info: {tiempo_mostrar_info} segundos")
+#    tiempo_mostrar_info = timeit.timeit(evaluacion.mostrar_info, number=10)
+#    print(f"Tiempo de ejecución de mostrar_info: {tiempo_mostrar_info} segundos")
 
     # Medir el tiempo de ejecución utilizando timeit para el método calcularPuntuacion
-#   tiempo_calcular_puntuacion = timeit.timeit(lambda: evaluacion.calcularPuntuacion(["aguacate", "melocotón", "gatos"]), number=10)
-#   print(f"Tiempo de ejecución de calcular_puntuacion: {tiempo_calcular_puntuacion} segundos")
+#    tiempo_calcular_puntuacion = timeit.timeit(lambda: evaluacion.calcularPuntuacion(["aguacate", "melocotón", "gatos"]), number=10)
+#    print(f"Tiempo de ejecución de calcular_puntuacion: {tiempo_calcular_puntuacion} segundos")
 
     # Perfilado del código utilizando cProfile para cada método
 #    cProfile.runctx("evaluacion.evaluar_alergias(128)", globals(), locals(), filename="perfilado_evaluar_alergias.txt")
@@ -94,7 +94,7 @@ def mostrar_menu():
 #    cProfile.runctx("tipos_alergias.analizarAlergia()", globals(), locals(), filename="perfilado_analizar_alergia.txt")
 
     # Análisis de la clase Alergia
- #   alergia_obj = Alergia()
+#    alergia_obj = Alergia()
 
     # Medir el tiempo de ejecución utilizando timeit para el método crearAlergia
 #    tiempo_crear_alergia = timeit.timeit(alergia_obj.crearAlergia, number=10)
