@@ -1,4 +1,12 @@
-Instrucciones de utilizacion
+# Instrucciones de utilizacion
+
+- Al ejecutar el comando make run se desplegara el menu principal del programa Alergias. El cual cuenta con 5 opciones:
+1. Ingresar su puntuacion de alergias y obtener una lista de las alergias a la cual es sensible.
+2. Ingresar nombres de alergias y obtener su puntuacion final.
+3. Ingresar nombre y codigo (puede ingresar solo nombre o solo codigo) y saber su puntuacion de alergia.
+4. Muestra la informacion total e individual de las alergias en el sistema.
+5. Salir del programa.
+
 
 
 # Respuestas a la parte teorica

@@ -2,6 +2,11 @@ from alergia import Alergia
 
 class TiposDeAlergias(Alergia):
     def __init__(self, lista):
+        """Constructor de la clase TiposDeAlergias.
+
+        Args:
+            lista (list): Lista de nuevas alergias proporcionada por el usuario.
+        """
         super().__init__()
         self.nuevas_alergias_usuario = lista
         self.nombres_sin_codigo = []
@@ -9,6 +14,7 @@ class TiposDeAlergias(Alergia):
         self.nuevas_alergias_revisadas = []
 
     def analizarAlergia(self):
+        """Analiza las nuevas alergias proporcionadas por el usuario."""
         for i in range(0, len(self.nuevas_alergias_usuario), 2):
             nombre = self.nuevas_alergias_usuario[i]
             try:
@@ -19,7 +25,11 @@ class TiposDeAlergias(Alergia):
                 elif not nombre.isalpha():
                     self.codigo_sin_nombre.append(codigo)
                 elif nombre.isalpha() and not (int(codigo) > 0 and (int(codigo) & (int(codigo) - 1)) == 0):
-                    self.nombres_sin_codigo.append(nombre)
+                    if nombre in self.alergias_conocidas:
+                        self.nuevas_alergias_revisadas.append(nombre)
+                        self.nuevas_alergias_revisadas.append(codigo)
+                    else:
+                        self.nombres_sin_codigo.append(nombre)
             except:
                 if nombre in self.alergias_conocidas:
                     codigo = "codigo que cambiara en el futuro"
@@ -29,12 +39,8 @@ class TiposDeAlergias(Alergia):
                     self.nombres_sin_codigo.append(nombre)
 
         puntuacion = 0
-        
         print("lista ingresada por el usuario:", self.nuevas_alergias_usuario)
-        
-
         lista_final_alergias = []
-        
 
         for i in range(0, len(self.nuevas_alergias_revisadas), 2):
             nombre = self.nuevas_alergias_revisadas[i]
@@ -63,5 +69,3 @@ class TiposDeAlergias(Alergia):
             print("\nEl porcentaje de acierto en las alergias fue de: ", (len(lista_final_alergias)/len(self.nuevas_alergias_usuario))*100, "\n")
         except:
             print("Se debe ingresar al menos una alergia para calcular el promedio")
-
-            
