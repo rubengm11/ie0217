@@ -2,8 +2,21 @@
 
 - Para ejecutar el archivo correspondiente a la parte practica 1 basta con ejecutar el comando "make run1".
     - Al ejecutarse, se despliega en pantalla el Dataframe completo, luego el Dataframe tras la limpieza de datos, y posteriormente un analisis estadistico de los datos, como el promedio, la desviacion estandar, modas... finalmente se observa la informacion individual de cada aerolinea, donde se detalla su nombre, cantidad de vuelos totales y cantidad de pasajeros totales.
+    - Se debe abrir una ventana que representa el primer grafico, el cual detalla la cantidad de vuelos segun el mes (entre los meses 1 y 10).
+    - Al cerrar esta ventana se abre un grafico que representa la distribucion de clases de vuelo utilziadas por los pasajeros, donde las letras representan: P (Primera Clase), F (Clase Ejecutiva), L (Clase Económica Premium) y G (Clase Económica).
+    - Luego aparece un grafico de calor que representa la co-relacion de las variables involucradas (siendo 1 la mayor co-relacion posible).
+    - Finalmente se crea un grafico de dispersion que representa la relacion entre la distancia de vuelo y la cantidad de pasajeros, separando los elementos segun la aerolinea.
+
 - Para ejecutar el archivo correspondiente a la parte practica 2 basta con ejecutar el comando "make run2".
     - Al ejecutarse, se observa la tabla de los 5 estudiantes y las 5 asignaturas con sus respectivas notas, luego un promedio de notas por estudiante, un promedio por asignatura, luego la nota maxima de cada estudiante y la suma de las notas por asignatura.
+
+
+# Resultados Parte Practica 1
+
+
+
+
+
 
 
 
