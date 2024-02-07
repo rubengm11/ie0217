@@ -3,25 +3,25 @@ import pandas as pd
 
 np.random.seed(29)
 
+# Funcion para calcular la el promedio por estudiante en todas las asignaturas
 def promedio_por_estudiante(datos):
-    # Excluimos la columna "Nombre" para calcular el promedio
+    # Se exclutye la columna "Nombre" para calcular el promedio con los numeros
     return datos.set_index("Nombre").mean(axis=1)
 
+# Funcion para calcular el promedio de calificaciones por asignatura 
 def promedio_por_asignatura(datos):
-    # Excluimos la columna "Nombre" para calcular el promedio
+    # Se exclutye la columna "Nombre" para calcular el promedio con los numeros
     return datos.set_index("Nombre").mean()
 
-
+# Funcion para calcular la nota mas alta por estudiante
 def maxima_calificacion_por_estudiante(datos):
-    # Excluimos la columna "Nombre" para encontrar la calificación máxima
+    # Se exclutye la columna "Nombre" para calcular el promedio con los numeros
     return datos.set_index("Nombre").max(axis=1)
 
+# Funcion para calcular la suma total por asignatura
 def suma_total_por_asignatura(datos):
-    # Excluimos la columna "Nombre" para calcular la suma total
+    # Se exclutye la columna "Nombre" para calcular el promedio con los numeros
     return datos.set_index("Nombre").sum()
-
-
-
 
 # Nombres de asignaturas
 asignaturas = ["Matemáticas", "Historia", "Ciencias", "Inglés", "Arte"]
@@ -31,8 +31,6 @@ nombres_estudiantes = ["Estudiante_A", "Estudiante_B", "Estudiante_C", "Estudian
 
 # Crear un DataFrame con calificaciones aleatorias
 calificaciones = np.random.randint(60, 100, size=(5, 5))
-
-# Crear un DataFrame de Pandas con columnas separadas para cada asignatura
 datos = pd.DataFrame(calificaciones, columns=asignaturas)
 
 # Agregar una columna para los nombres de los estudiantes
@@ -46,10 +44,14 @@ datos = datos[column_order]
 print("DataFrame con columnas separadas por asignatura:")
 print(datos, '\n')
 
+# Promedio por estudiante en todas las asignaturas
 print("Promedio por estudiante:\n", promedio_por_estudiante(datos))
 
+# Promedio por asignatura
 print("\nPromedio por asignatura:\n", promedio_por_asignatura(datos), sep="")
 
+# Calificaciones maximas por estudiante
 print("\nCalificación máxima por estudiante:\n", maxima_calificacion_por_estudiante(datos))
 
+# Suma total por asignatura
 print("\nSuma total por asignatura:\n", suma_total_por_asignatura(datos), sep="")
