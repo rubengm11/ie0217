@@ -39,7 +39,7 @@
 - La imagen anterior muestra la dependencia entre las variables de interes, se observa que la relacion entre ellas es bastante baja (0.04 la mayor), esto puede deberse a la aleatoriedad e independencia de los datos, pues hay registros de vuelos de todo tipo, de distintas aerolineas y con distintos pasajeros.
 
 7. Relacion entre la distancia de vuelo y la cantidad de pasajeros:
-- ![Relacion entre la distancia de vuelo y la cantidad de pasajeros](./imagenes_resultados/distancia_pasajeros(ultimo graf).PNG)
+- ![Relacion entre la distancia de vuelo y la cantidad de pasajeros](./imagenes_resultados/distancia_pasajeros.PNG)
 - Este ultimo grafico muestra la cantidad de pasajeros en relacion con la distancia de vuelo, se observa que para distancias muy largas, la cantidad de pasajeros es minima o nula, pues posiblemente son vuelos de carga. 
 - La mayor cantidad de pasajeros se da en vuelos de entre 650km y 700km, brindados mayormente por las aerolineas Delta Air Lines Inc. y Southwest Airlines Co.
 - Se observan muchos vuelos con 0 o un numero muy bajo de pasajeros, esto se debe a que los datos incluyen vuelos de carga, de entrenamiento, militares, privados... donde la cantidad de pasajeros no suele superar las 15 personas.
