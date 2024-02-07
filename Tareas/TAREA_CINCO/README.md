@@ -1,4 +1,9 @@
-# README de la tarea 5
+# Instrucciones de uso
+
+- Para ejecutar el archivo correspondiente a la parte practica 1 basta con ejecutar el comando "make run1".
+    - Al ejecutarse, se despliega en pantalla el Dataframe completo, luego el Dataframe tras la limpieza de datos, y posteriormente un analisis estadistico de los datos, como el promedio, la desviacion estandar, modas... finalmente se observa la informacion individual de cada aerolinea, donde se detalla su nombre, cantidad de vuelos totales y cantidad de pasajeros totales.
+- Para ejecutar el archivo correspondiente a la parte practica 2 basta con ejecutar el comando "make run2".
+    - Al ejecutarse, se observa la tabla de los 5 estudiantes y las 5 asignaturas con sus respectivas notas, luego un promedio de notas por estudiante, un promedio por asignatura, luego la nota maxima de cada estudiante y la suma de las notas por asignatura.
 
 
 
