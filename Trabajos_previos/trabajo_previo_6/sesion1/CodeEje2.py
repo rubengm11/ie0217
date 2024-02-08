@@ -26,7 +26,7 @@ r2 = r2_score(y_test, y_pred)
 # Resultados
 plt.scatter(X_test, y_test, label='Datos de prueba', color='blue')
 plt.plot(X_test, y_pred, label=f'Regresión Lineal (R²={r2:.2f})', color='red')
-plt.title('Regresión Lineal y Coeficiente de Determinación R²')
+plt.title('Regresión Lineal y Coeficiente de Determinacion R2')
 plt.xlabel('X')
 plt.ylabel('y')
 plt.legend()

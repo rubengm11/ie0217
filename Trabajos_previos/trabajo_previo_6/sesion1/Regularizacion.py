@@ -35,7 +35,7 @@ plt.plot(X_test_sorted, y_pred_polinomico_sorted, label='Regresion Polinomica', 
 plt.plot(X_test_sorted, y_pred_lasso_sorted, label='Lasso (L1)', color='red')
 plt.plot(X_test_sorted, y_pred_ridge_sorted, label='Ridge (L2)', color='orange')
 
-plt.title('Batalla de los Modelos: Polinomico vs. Lasso vs. Ridge')
+plt.title('Polinomico vs. Lasso vs. Ridge')
 plt.xlabel('Caracteristica Misteriosa X')
 plt.ylabel('Objetivo Esquivo Y')
 plt.legend()  

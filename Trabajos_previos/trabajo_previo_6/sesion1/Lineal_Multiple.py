@@ -9,12 +9,12 @@ from sklearn.datasets import make_regression
 X, y = make_regression(n_samples=100, n_features=3, noise=20, random_state=42)
 
 # Creacion de un DataFrame
-df = pd.DataFrame(X, columns=['Tamaño', 'Habitaciones', 'Distancia_Ciudad'])
+df = pd.DataFrame(X, columns=['Tamano', 'Habitaciones', 'Distancia_Ciudad'])
 df['Precio'] = y
 
 # Division de los datos
 X_train, X_test, y_train, y_test = train_test_split(
-    df[['Tamaño', 'Habitaciones', 'Distancia_Ciudad']], 
+    df[['Tamano', 'Habitaciones', 'Distancia_Ciudad']], 
     df['Precio'], test_size=0.2, random_state=42
 )
 
@@ -33,18 +33,18 @@ y_pred = modelo.predict(X_test)
 fig = plt.figure(figsize=(12, 6))
 
 ax1 = fig.add_subplot(131, projection='3d')
-ax1.scatter(X_test['Tamaño'], X_test['Habitaciones'], y_test, c='blue', marker='o', alpha=0.5)
-ax1.set_xlabel('Tamaño')
+ax1.scatter(X_test['Tamano'], X_test['Habitaciones'], y_test, c='blue', marker='o', alpha=0.5)
+ax1.set_xlabel('Tamano')
 ax1.set_ylabel('Habitaciones')
 ax1.set_zlabel('Precio Verdadero')
-ax1.set_title('Precio Verdadero vs. Tamaño y Habitaciones')
+ax1.set_title('Precio Verdadero vs. Tamano y Habitaciones')
 
 ax2 = fig.add_subplot(132, projection='3d')
-ax2.scatter(X_test['Tamaño'], X_test['Habitaciones'], y_pred, c='red', marker='o', alpha=0.5)
-ax2.set_xlabel('Tamaño')
+ax2.scatter(X_test['Tamano'], X_test['Habitaciones'], y_pred, c='red', marker='o', alpha=0.5)
+ax2.set_xlabel('Tamano')
 ax2.set_ylabel('Habitaciones')
 ax2.set_zlabel('Precio Predicho')
-ax2.set_title('Precio Predicho vs. Tamaño y Habitaciones')
+ax2.set_title('Precio Predicho vs. Tamano y Habitaciones')
 
 ax3 = fig.add_subplot(133)
 ax3.scatter(y_test, y_pred, c='green', alpha=0.5)
